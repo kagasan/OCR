@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>OCR</title>
+<script src="script.js"></script>
+</head>
+<body>
+<h1>OpticalCircuitRecognition</h1>
+手書き回路をカメラで撮影して認識したい．<br>
+<hr>
+<b>使いかた</b>
+<ol>
+<li>方眼紙上で回路図を書く．</li>
+<li>赤枠で囲う．</li>
+<li>画像中央に枠が収まるように撮影．</li>
+<li>枠のサイズをフォームで設定．</li>
+<li>画像を選択．</li>
+<li>実行ボタンを押す．</li>
+</ol>
+<hr>
+<b>現バージョンについて</b>
+<ul>
+<li>試験段階です．</li>
+<li>処理はブラウザ上で行っています．<br>
+（画像のアップロードは行っていません．）<br>
+そのため，マシンによって処理が遅くなる場合があります．</li>
+<li>配線のみ認識できるはず．</li>
+<li>最終的にはブラウザ上で手直しまでできるようにしたい．</li>
+</ul>
+<hr>
+<b>設定フォーム</b><br>
+<form name='fm'>
+横に収まる正方形の数<input name="wnum" type='text' value='5' style='width: 30px;'/><br>
+縦に収まる正方形の数<input name="hnum" type='text' value='5' style='width: 30px;'/><br>
+</form>
+<hr>
+<input type="file" id="selectfile" accept='image/*'><br>
+<input type="button" value="実行" onclick="ocr()"/><br>
+<div id="ocr"></div>
+<div id="circuit"></div>
+<hr>
+</body>
+</html>
